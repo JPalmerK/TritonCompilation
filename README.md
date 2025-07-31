@@ -33,3 +33,6 @@ Should this be in the tools menu or is this a derivitive of other functionality?
 ## Batch LTSA
 Should this be in the tools menu or is this a derivitive of other functionality?
 
+## Logger
+Should this be in the tools menu or is this a derivitive of other functionality?
+
