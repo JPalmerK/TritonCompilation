@@ -26,3 +26,10 @@ Added a wrapper function to run. Runs, loads, but no templates present on testin
 
 ## Airgun Detector
 Some changes. Appears to be working with test soundtrap data, returns mostly empty mat file. However, no airguns in the data so output may be incorrect. Furtehr validation needded
+
+## LabelVis
+Should this be in the tools menu or is this a derivitive of other functionality?
+
+## Batch LTSA
+Should this be in the tools menu or is this a derivitive of other functionality?
+
