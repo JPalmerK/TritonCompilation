@@ -12,6 +12,11 @@ PARAMS.path.Extras   = fullfile(rootDir, 'Extras');
 PARAMS.path.Remoras  = fullfile(rootDir, 'Remoras');
 PARAMS.path.tools    = fullfile(rootDir, 'Tools');
 
+% Add the extras path for the logo
+addpath(PARAMS.path.Extras);
+
 % Add Explosion Detector Remora path directly (only one we're using)
 addpath(fullfile(PARAMS.path.Remoras, 'Explosion-Detector'));
 addpath(fullfile(PARAMS.path.Remoras, 'Fish detector'));
+addpath(fullfile(PARAMS.path.Remoras, 'EchoDet'));
+addpath(fullfile(PARAMS.path.Remoras, 'Airgun-Detector'));

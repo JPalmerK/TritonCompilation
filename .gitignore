@@ -39,6 +39,5 @@ codegen/
 *.sbproj.backup
 *.sbproj.bak
 /Code/Triton-for-compiling - Copy
-/Code/Triton-for-compiling/ExampleRemoras
 /OrigionalTriton
 /StandAloneTests

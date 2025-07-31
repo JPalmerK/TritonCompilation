@@ -64,6 +64,16 @@ uimenu(HANDLES.explosionMenu, 'Label', 'Run Explosion Detector', 'Callback', 'ex
 HANDLES.fishMenu = uimenu(HANDLES.toolmenu, 'Label', 'Fish Detector', 'Enable', 'on', 'Visible', 'on');
 uimenu(HANDLES.fishMenu, 'Label', 'Run Fish Detector', 'Callback', 'pi_pulldown(''full_detector'')');
 
+% --- Hardcoded Remora: Echo Detector ---
+HANDLES.echodetMenu = uimenu(HANDLES.toolmenu, 'Label', 'EchoDet', 'Enable', 'on', 'Visible', 'on');
+uimenu(HANDLES.echodetMenu, 'Label', 'Run Echosounder Detector', 'Callback', 'run_echodet');
+uimenu(HANDLES.echodetMenu, 'Label', 'Create ID File per Folder', 'Callback', 'run_echodet_idfiles');
+
+% --- Hardcoded Remora: Air gun detector ---
+REMORA.agDetect.menu = uimenu(HANDLES.toolmenu,'Label','&Airgun Detector','Enable','on','Visible','on');
+uimenu(REMORA.agDetect.menu, 'Label', 'Run Airgun Detector', 'Callback', 'ag_detect_pulldown');
+
+
 
 % === Help Menu ===
 HANDLES.helpmenu = uimenu(HANDLES.fig.ctrl,'Label','&Help','Enable','on');
