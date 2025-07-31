@@ -8,6 +8,9 @@ Triton figure not loading
 ## Create LTSA
 Functional
 
+## Load LTSA
+Functional
+
 ## Convert HARP to XWAV
 Not tested
 
