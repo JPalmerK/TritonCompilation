@@ -73,7 +73,9 @@ uimenu(HANDLES.echodetMenu, 'Label', 'Create ID File per Folder', 'Callback', 'r
 REMORA.agDetect.menu = uimenu(HANDLES.toolmenu,'Label','&Airgun Detector','Enable','on','Visible','on');
 uimenu(REMORA.agDetect.menu, 'Label', 'Run Airgun Detector', 'Callback', 'ag_detect_pulldown');
 
-
+% --- Hardcoded Remora: Label Vis ---
+REMORA.agDetect.menu = uimenu(HANDLES.toolmenu,'Label','&LabelVis','Enable','on','Visible','on');
+uimenu(REMORA.agDetect.menu, 'Label', 'Run Label Vis', 'Callback', 'lt_pulldown');
 
 % === Help Menu ===
 HANDLES.helpmenu = uimenu(HANDLES.fig.ctrl,'Label','&Help','Enable','on');

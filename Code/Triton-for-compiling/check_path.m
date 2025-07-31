@@ -20,3 +20,4 @@ addpath(fullfile(PARAMS.path.Remoras, 'Explosion-Detector'));
 addpath(fullfile(PARAMS.path.Remoras, 'Fish detector'));
 addpath(fullfile(PARAMS.path.Remoras, 'EchoDet'));
 addpath(fullfile(PARAMS.path.Remoras, 'Airgun-Detector'));
+addpath(fullfile(PARAMS.path.Remoras, 'LabelVis'));
