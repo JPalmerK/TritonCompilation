@@ -4,6 +4,16 @@ This repo contains modified version of Triton (https://github.com/MarineBioAcous
 Triton figure not loading
 
 
+# Built In Functionality
+## Create LTSA
+Functional
+
+## Convert HARP to XWAV
+Not tested
+
+## Decimate WAV/XWAV
+Not tested
+
 # Remora Status
 ## Explosion-Detector- functional
 Installed appears to be working (no errors, produces data) on wav files. Not tested on HARP data. 
