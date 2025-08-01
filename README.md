@@ -31,11 +31,18 @@ Added a wrapper function to run. Runs, loads, but no templates present on testin
 Some changes. Appears to be working with test soundtrap data, returns mostly empty mat file. However, no airguns in the data so output may be incorrect. Furtehr validation needded
 
 ## LabelVis
-Should this be in the tools menu or is this a derivitive of other functionality?
+All dropdowns/windows working. No data to fully evaluate on.
 
 ## Batch LTSA
 Should this be in the tools menu or is this a derivitive of other functionality?
 
-## Logger
-Should this be in the tools menu or is this a derivitive of other functionality?
+## Cluster Tool
+All gui's loaded, functionality not finalized
+
+## Soundscape Metrics
+All gui's loaded, functionality not finalized
+
+
+# Currently Excuded Remoras (JAVA dependencies)
+Tethes, Logger, Detector
 
