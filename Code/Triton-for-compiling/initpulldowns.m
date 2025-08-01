@@ -106,25 +106,64 @@ uimenu(REMORA.ct.menu, 'Label', 'Post-Clustering Options', ...
 
 
 % --- Hardcoded Remora: Soundscape Metrics ---
-
 REMORA.sm.menu = uimenu(HANDLES.remmenu,'Label','&Soundscape Metrics',...
     'Enable','on','Visible','on');
-
 % Make Soundscape LTSAs
 uimenu(REMORA.sm.menu, 'Label', 'Make Soundscape LTSAs', ...
     'Enable','on','Callback', 'sm_pulldown(''make_ltsa'')');
-
 % Compute soundscape metrics
 uimenu(REMORA.sm.menu, 'Label', 'Compute Soundscape Metrics', ...
     'Callback', 'sm_pulldown(''compute_metrics'')');
-
 % Load Soundscape LTSAs
 uimenu(REMORA.sm.menu, 'Label', 'Load Soundscape LTSA', ...
     'Enable','on','Callback', 'sm_pulldown(''load_ltsa'')');
-
 % Plot soundscape metrics
 uimenu(REMORA.sm.menu, 'Label', 'Plot Soundscape Metrics', ...
     'Callback', 'sm_pulldown(''plot_metrics'')');
+
+% --- Hardcoded Remora: Ship Detector ---
+REMORA.sh.menu = uimenu(HANDLES.remmenu,'Label','&Ship-Detector',...
+    'Enable','on','Visible','on');
+% Interactive ltsa detector
+uimenu(REMORA.sh.menu, 'Label', 'Interactive detector (LTSA)', ...
+    'Enable','on','Callback', 'sh_pulldown(''interactive'')');
+% Run ship detector
+uimenu(REMORA.sh.menu, 'Label', 'Batch run detector', ...
+    'Callback', 'sh_pulldown(''full_detector'')');
+% Visualize labels
+REMORA.sh.labelmenu = uimenu(REMORA.sh.menu, 'Label', 'Visualize detections');
+uimenu(REMORA.sh.labelmenu, 'Label', 'Create labels from text file', ...
+    'Enable','on','Callback', 'sh_pulldown(''create_labels'')');
+uimenu(REMORA.sh.labelmenu, 'Label', 'Load labels (.tlab)', ...
+    'Enable','on','Callback', 'sh_pulldown(''load_labels'')');
+% Run evaluate interface
+uimenu(REMORA.sh.menu, 'Label', 'Evaluate detections', ...
+    'Enable','on','Callback', 'sh_pulldown(''evaluate_detections'')');
+
+
+% --- Hardcoded Remora: SPICE Detector ---
+% initialization script for spice detector remora
+REMORA.spice_dt.menu = uimenu(HANDLES.remmenu,'Label','&SPICE-Detector',...
+    'Enable','on','Visible','on');
+
+% interactive xwav detector
+uimenu(REMORA.spice_dt.menu, 'Label', 'Interactive detector', ...
+    'Callback', 'sp_dt_pd(''xwav'')');
+% Run both high and low res 
+uimenu(REMORA.spice_dt.menu, 'Label', 'Batch run detector', ...
+    'Callback', 'sp_dt_pd(''full_detector'')');
+uimenu(REMORA.spice_dt.menu, 'Label', 'Convert detections to TPWS', ...
+    'Callback', 'sp_dt_pd(''make_TPWS'')');
+
+% --- Hardcoded Remora: Batch LTSA
+REMORA.batchLTSA.menu = uimenu(HANDLES.remmenu,'Label','&Batch LTSA',...
+    'Enable','on','Visible','on');
+% Batch create LTSAs over multiple directories
+uimenu(REMORA.batchLTSA.menu, 'Label', 'Batch create LTSAs', ...
+    'Callback', 'batchLTSA_pulldown(''batch_ltsas'')');
+                   
+
+
 
 
 % % --- Hardcoded Remora: Logger ---

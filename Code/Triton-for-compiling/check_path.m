@@ -38,6 +38,23 @@ addpath(fullfile(PARAMS.path.Remoras, 'Soundscape-Metrics', 'gui'));
 addpath(fullfile(PARAMS.path.Remoras, 'Soundscape-Metrics', 'ltsa'));
 addpath(fullfile(PARAMS.path.Remoras, 'Soundscape-Metrics', 'settings'));
 
+addpath(fullfile(PARAMS.path.Remoras, 'Ship-Detector'));
+addpath(fullfile(PARAMS.path.Remoras, 'Ship-Detector', 'detection'));
+addpath(fullfile(PARAMS.path.Remoras, 'Ship-Detector', 'gui'));
+addpath(fullfile(PARAMS.path.Remoras, 'Ship-Detector', 'evaluation'));
+addpath(fullfile(PARAMS.path.Remoras, 'Ship-Detector', 'settings'));
+
+addpath(fullfile(PARAMS.path.Remoras, 'SPICE-Detector'));
+addpath(fullfile(PARAMS.path.Remoras, 'SPICE-Detector', 'detection'));
+addpath(fullfile(PARAMS.path.Remoras, 'SPICE-Detector', 'gui'));
+addpath(fullfile(PARAMS.path.Remoras, 'SPICE-Detector', 'funs'));
+addpath(fullfile(PARAMS.path.Remoras, 'SPICE-Detector', 'settings'));
+addpath(fullfile(PARAMS.path.Remoras, 'SPICE-Detector', 'io'));
+addpath(fullfile(PARAMS.path.Remoras, 'SPICE-Detector', 'ui'));
+
+
+addpath(fullfile(PARAMS.path.Remoras, 'BatchLTSA'));
+addpath(fullfile(PARAMS.path.Remoras, 'BatchLTSA', 'wiki'));
 
 
 % addpath(fullfile(PARAMS.path.Remoras, 'Logger'));
