@@ -3,6 +3,10 @@ function lt_init_mk_tLab_window
 global REMORA
 
 
+if ~isfield(REMORA, 'fig') || ~isstruct(REMORA.fig)
+    REMORA.fig = struct;
+end
+
 defaultPos = [0.25,0.25,0.38,0.4];
 if isfield(REMORA.fig, 'lt')
     % check if the figure already exists. If so, don't move it.

@@ -46,5 +46,5 @@ buildResult = compiler.build.standaloneApplication(buildOpts);
 buildDir = buildOpts.OutputDir;   % e.g. …\StandAloneTests\build
 baseDir  = fullfile(projectRoot, "Code", "Triton-for-compiling");
 
-% Copy all files AND sub-folders (Remoras, Extras, sigproc, etc.) into the build
-copyfile( fullfile(baseDir, '*'), buildDir );
+% % Copy all files AND sub-folders (Remoras, Extras, sigproc, etc.) into the build
+% copyfile( fullfile(baseDir, '*'), buildDir );

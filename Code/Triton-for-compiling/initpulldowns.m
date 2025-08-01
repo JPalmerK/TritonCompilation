@@ -56,26 +56,88 @@ uimenu(HANDLES.decimenu,'Label','&Decimate All WAV/FLAC Files in Directory','Ena
 
 uimenu(HANDLES.toolmenu,'Label','&Make LTSA from Directory of Files','Enable','on','Callback','toolpd(''mkltsa'')');
 
+% === Remora Menu ===
+HANDLES.remmenu = uimenu(HANDLES.fig.ctrl,'Label','&Remoras','Enable','on');
+
 % --- Hardcoded Remora: Explosion Detector ---
-HANDLES.explosionMenu = uimenu(HANDLES.toolmenu, 'Label', 'Explosion Detector', 'Enable', 'on', 'Visible', 'on');
+HANDLES.explosionMenu = uimenu(HANDLES.remmenu, 'Label', 'Explosion Detector', 'Enable', 'on', 'Visible', 'on');
 uimenu(HANDLES.explosionMenu, 'Label', 'Run Explosion Detector', 'Callback', 'ex_detect_pulldown');
 
 % --- Hardcoded Remora: Fish Detector ---
-HANDLES.fishMenu = uimenu(HANDLES.toolmenu, 'Label', 'Fish Detector', 'Enable', 'on', 'Visible', 'on');
+HANDLES.fishMenu = uimenu(HANDLES.remmenu, 'Label', 'Fish Detector', 'Enable', 'on', 'Visible', 'on');
 uimenu(HANDLES.fishMenu, 'Label', 'Run Fish Detector', 'Callback', 'pi_pulldown(''full_detector'')');
 
 % --- Hardcoded Remora: Echo Detector ---
-HANDLES.echodetMenu = uimenu(HANDLES.toolmenu, 'Label', 'EchoDet', 'Enable', 'on', 'Visible', 'on');
+HANDLES.echodetMenu = uimenu(HANDLES.remmenu, 'Label', 'EchoDet', 'Enable', 'on', 'Visible', 'on');
 uimenu(HANDLES.echodetMenu, 'Label', 'Run Echosounder Detector', 'Callback', 'run_echodet');
 uimenu(HANDLES.echodetMenu, 'Label', 'Create ID File per Folder', 'Callback', 'run_echodet_idfiles');
 
 % --- Hardcoded Remora: Air gun detector ---
-REMORA.agDetect.menu = uimenu(HANDLES.toolmenu,'Label','&Airgun Detector','Enable','on','Visible','on');
+REMORA.agDetect.menu = uimenu(HANDLES.remmenu,'Label','&Airgun Detector','Enable','on','Visible','on');
 uimenu(REMORA.agDetect.menu, 'Label', 'Run Airgun Detector', 'Callback', 'ag_detect_pulldown');
 
 % --- Hardcoded Remora: Label Vis ---
-REMORA.agDetect.menu = uimenu(HANDLES.toolmenu,'Label','&LabelVis','Enable','on','Visible','on');
-uimenu(REMORA.agDetect.menu, 'Label', 'Run Label Vis', 'Callback', 'lt_pulldown');
+REMORA.lt.menu = uimenu(HANDLES.remmenu,'Label','&LabelVis',...
+    'Enable','on','Visible','on');
+
+%create tlab files from text
+uimenu(REMORA.lt.menu, 'Label', 'Create tLabs from Text File',...
+    'Callback','lt_pulldown(''create_tlabs_txt'')');
+% create tlab files 
+uimenu(REMORA.lt.menu, 'Label', 'Create tLabs from DetEdit Output', ...
+    'Callback', 'lt_pulldown(''create_tlabs_detEdit'')');
+% Start label visualization
+uimenu(REMORA.lt.menu, 'Label', 'Visualize Labels', ...
+    'Callback', 'lt_pulldown(''visualize_labels'')');
+if ~isfield(REMORA,'fig')
+    REMORA.fig = [];
+end
+
+% --- Hardcoded Remora: Cluster Tool ---
+REMORA.ct.menu = uimenu(HANDLES.remmenu,'Label','&Cluster Tool',...
+    'Enable','on','Visible','on');
+
+% --- Hardcoded Remora: Cluster Tool ---
+REMORA.ct.menu = uimenu(HANDLES.remmenu,'Label','&Cluster Tool',...
+    'Enable','on','Visible','on');
+
+% Run cluster bins
+uimenu(REMORA.ct.menu, 'Label', 'Cluster Bins', ...
+    'Callback', 'ct_pulldown(''cluster_bins'')');
+% Run composite clusters
+uimenu(REMORA.ct.menu, 'Label', 'Composite Clusters', ...
+    'Callback', 'ct_pulldown(''composite_clusters'')');
+uimenu(REMORA.ct.menu, 'Label', 'Post-Clustering Options', ...
+    'Callback', 'ct_pulldown(''post_cluster'')');
+
+
+% % --- Hardcoded Remora: Logger ---
+% REMORA.logmenu = uimenu(HANDLES.remmenu,'Label','&Log',...
+%     'Enable','on','Visible','on');
+% % select a logging GUI
+% uimenu(REMORA.logmenu,'Label', 'New log', ...
+%     'MenuSelectedFcn', {@initLogctrl, 'create'});
+% uimenu(REMORA.logmenu, 'Label', 'Continue existing log', ...
+%     'MenuSelectedFcn', {@initLogctrl, 'append'});
+% uimenu(REMORA.logmenu, 'Label', 'Submit log', ...
+%     'MenuSelectedFcn', @submit_to_tethys);
+% uimenu(REMORA.logmenu, 'Label', 'Toggle workbook visibility', ...
+%     'MenuSelectedFcn', {@control_log, 'workbook_visibility_toggle'});
+% uimenu(REMORA.logmenu, 'Label', '&Add hotkey', 'Enable', 'on', ...
+%     'Visible', 'on', 'MenuSelectedFcn', @addHotKey);
+% 
+% % allow Logger Remora to use the mouse click down button in the main
+% % Plot Window 
+% REMORA.pick.value = 1;
+% % define what function to run after picking in the main Plot Window
+% % put m-file name in REMORA.pick.fcn cell array in order of execution
+% REMORA.pick.fcn{1} = {'logpickOn'};
+% 
+% % Function for adding hotkey commands to the plot figure
+% xmlFile = which('keymapLogger.xml');
+% PARAMS.keypress = xml_read(xmlFile);
+% set(HANDLES.fig.main,'KeyPressFcn',@handleKeypress)
+
 
 % === Help Menu ===
 HANDLES.helpmenu = uimenu(HANDLES.fig.ctrl,'Label','&Help','Enable','on');

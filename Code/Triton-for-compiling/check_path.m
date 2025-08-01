@@ -20,4 +20,18 @@ addpath(fullfile(PARAMS.path.Remoras, 'Explosion-Detector'));
 addpath(fullfile(PARAMS.path.Remoras, 'Fish detector'));
 addpath(fullfile(PARAMS.path.Remoras, 'EchoDet'));
 addpath(fullfile(PARAMS.path.Remoras, 'Airgun-Detector'));
+
 addpath(fullfile(PARAMS.path.Remoras, 'LabelVis'));
+addpath(fullfile(PARAMS.path.Remoras, 'LabelVis', 'make_tLabs'));
+addpath(fullfile(PARAMS.path.Remoras, 'LabelVis', 'initWindows'));
+addpath(fullfile(PARAMS.path.Remoras, 'LabelVis', 'vis_Labels'));
+
+addpath(fullfile(PARAMS.path.Remoras, 'ClusterTool'));
+addpath(fullfile(PARAMS.path.Remoras, 'ClusterTool', 'cluster'));
+addpath(fullfile(PARAMS.path.Remoras, 'ClusterTool', 'extratools'));
+addpath(fullfile(PARAMS.path.Remoras, 'ClusterTool', 'gui'));
+addpath(fullfile(PARAMS.path.Remoras, 'ClusterTool', 'settings'));
+
+
+% addpath(fullfile(PARAMS.path.Remoras, 'Logger'));
+% addpath(fullfile(PARAMS.path.Remoras, 'Logger', 'log_data'));
