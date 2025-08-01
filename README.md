@@ -37,10 +37,10 @@ All dropdowns/windows working. No data to fully evaluate on.
 Should this be in the tools menu or is this a derivitive of other functionality?
 
 ## Cluster Tool
-All gui's loaded, functionality not finalized
+All gui's loading properly, functionality not finalized
 
 ## Soundscape Metrics
-All gui's loaded, functionality not finalized
+All gui's loading properly, functionality not finalized
 
 
 # Currently Excuded Remoras (JAVA dependencies)
