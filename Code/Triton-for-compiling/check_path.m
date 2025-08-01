@@ -32,6 +32,13 @@ addpath(fullfile(PARAMS.path.Remoras, 'ClusterTool', 'extratools'));
 addpath(fullfile(PARAMS.path.Remoras, 'ClusterTool', 'gui'));
 addpath(fullfile(PARAMS.path.Remoras, 'ClusterTool', 'settings'));
 
+addpath(fullfile(PARAMS.path.Remoras, 'Soundscape-Metrics'));
+addpath(fullfile(PARAMS.path.Remoras, 'Soundscape-Metrics', 'cmpt'));
+addpath(fullfile(PARAMS.path.Remoras, 'Soundscape-Metrics', 'gui'));
+addpath(fullfile(PARAMS.path.Remoras, 'Soundscape-Metrics', 'ltsa'));
+addpath(fullfile(PARAMS.path.Remoras, 'Soundscape-Metrics', 'settings'));
+
+
 
 % addpath(fullfile(PARAMS.path.Remoras, 'Logger'));
 % addpath(fullfile(PARAMS.path.Remoras, 'Logger', 'log_data'));

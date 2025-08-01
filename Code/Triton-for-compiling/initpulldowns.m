@@ -79,7 +79,6 @@ uimenu(REMORA.agDetect.menu, 'Label', 'Run Airgun Detector', 'Callback', 'ag_det
 % --- Hardcoded Remora: Label Vis ---
 REMORA.lt.menu = uimenu(HANDLES.remmenu,'Label','&LabelVis',...
     'Enable','on','Visible','on');
-
 %create tlab files from text
 uimenu(REMORA.lt.menu, 'Label', 'Create tLabs from Text File',...
     'Callback','lt_pulldown(''create_tlabs_txt'')');
@@ -96,11 +95,6 @@ end
 % --- Hardcoded Remora: Cluster Tool ---
 REMORA.ct.menu = uimenu(HANDLES.remmenu,'Label','&Cluster Tool',...
     'Enable','on','Visible','on');
-
-% --- Hardcoded Remora: Cluster Tool ---
-REMORA.ct.menu = uimenu(HANDLES.remmenu,'Label','&Cluster Tool',...
-    'Enable','on','Visible','on');
-
 % Run cluster bins
 uimenu(REMORA.ct.menu, 'Label', 'Cluster Bins', ...
     'Callback', 'ct_pulldown(''cluster_bins'')');
@@ -109,6 +103,28 @@ uimenu(REMORA.ct.menu, 'Label', 'Composite Clusters', ...
     'Callback', 'ct_pulldown(''composite_clusters'')');
 uimenu(REMORA.ct.menu, 'Label', 'Post-Clustering Options', ...
     'Callback', 'ct_pulldown(''post_cluster'')');
+
+
+% --- Hardcoded Remora: Soundscape Metrics ---
+
+REMORA.sm.menu = uimenu(HANDLES.remmenu,'Label','&Soundscape Metrics',...
+    'Enable','on','Visible','on');
+
+% Make Soundscape LTSAs
+uimenu(REMORA.sm.menu, 'Label', 'Make Soundscape LTSAs', ...
+    'Enable','on','Callback', 'sm_pulldown(''make_ltsa'')');
+
+% Compute soundscape metrics
+uimenu(REMORA.sm.menu, 'Label', 'Compute Soundscape Metrics', ...
+    'Callback', 'sm_pulldown(''compute_metrics'')');
+
+% Load Soundscape LTSAs
+uimenu(REMORA.sm.menu, 'Label', 'Load Soundscape LTSA', ...
+    'Enable','on','Callback', 'sm_pulldown(''load_ltsa'')');
+
+% Plot soundscape metrics
+uimenu(REMORA.sm.menu, 'Label', 'Plot Soundscape Metrics', ...
+    'Callback', 'sm_pulldown(''plot_metrics'')');
 
 
 % % --- Hardcoded Remora: Logger ---
